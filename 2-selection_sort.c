@@ -21,11 +21,11 @@ void swap(int *x, int *y)
  */
 void selection_sort(int *array, size_t size)
 {
-
-	for (size_t i = 0; i < size - 1; i++)
+    size_t i, j, mn;
+	for (i = 0; i < size - 1; i++)
 	{
-		size_t mn = i;
-		for (size_t j = i + 1; j < size; j++)
+		int mn = i;
+		for (j = i + 1; j < size; j++)
 		{
 			if (array[j] < array[mn])
 				mn = j;
