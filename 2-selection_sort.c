@@ -30,7 +30,10 @@ void selection_sort(int *array, size_t size)
 			if (array[j] < array[mn])
 				mn = j;
 		}
-		swap(&array[mn], &array[i]);
-		print_array(array, size);
+		if (mn != i)
+		{
+			swap(&array[mn], &array[i]);
+			print_array(array, size);
+		}
 	}
 }
