@@ -22,10 +22,10 @@ void swap(int *x, int *y)
 void selection_sort(int *array, size_t size)
 {
 
-	for (int i = 0; i < size - 1; i++)
+	for (size_t i = 0; i < size - 1; i++)
 	{
-		int mn = i;
-		for (int j = i + 1; j < size; j++)
+		size_t mn = i;
+		for (size_t j = i + 1; j < size; j++)
 		{
 			if (array[j] < array[mn])
 				mn = j;
