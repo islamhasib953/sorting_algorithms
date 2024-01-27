@@ -6,11 +6,11 @@
  *
  * Return: void
  */
-void swap(int *xp, int *yp)
+void swap(int *x, int *y)
 {
-	size_t tmp = *xp;
-	*xp = *yp;
-	*yp = tmp;
+	size_t tmp = *x;
+	*x = *y;
+	*y = tmp;
 }
 /**
  * selection_sort - Implement Funtion That Create Selection Sort Alogrithm
@@ -21,20 +21,16 @@ void swap(int *xp, int *yp)
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, minIDX;
 
-	for (i = 0; i < size - 1; i++)
+	for (int i = 0; i < size - 1; i++)
 	{
-		minIDX = i;
-		for (j = i + 1; j < size; j++)
+		int mn = i;
+		for (int j = i + 1; j < size; j++)
 		{
-			if (array[j] < array[minIDX])
-				minIDX = j;
+			if (array[j] < array[mn])
+				mn = j;
 		}
-		if (minIDX != i)
-		{
-			swap(&array[minIDX], &array[i]);
-			print_array(array, size);
-		}
+		swap(&array[mn], &array[i]);
+		print_array(array, size);
 	}
 }
