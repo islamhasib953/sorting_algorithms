@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
  * swap - Function That Swapped Array Element
- * @xp: First Position
- * @yp: Second Position
+ * @x: First Position
+ * @y: Second Position
  *
  * Return: void
  */
@@ -21,19 +21,19 @@ void swap(int *x, int *y)
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, minIDX;
+	size_t i, j, mn;
 
 	for (i = 0; i < size - 1; i++)
 	{
-		minIDX = i;
+		mn = i;
 		for (j = i + 1; j < size; j++)
 		{
-			if (array[j] < array[minIDX])
-				minIDX = j;
+			if (array[j] < array[mn])
+				mn = j;
 		}
-		if (minIDX != i)
+		if (mn != i)
 		{
-			swap(&array[minIDX], &array[i]);
+			swap(&array[mn], &array[i]);
 			print_array(array, size);
 		}
 	}
