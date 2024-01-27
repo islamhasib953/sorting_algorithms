@@ -8,11 +8,11 @@
  * Return: void
  */
 
-void swap(int *x, int *y)
+void swap(int *xp, int *yp)
 {
-	size_t tmp = *x;
-	*x = *y;
-	*y = tmp;
+	size_t tmp = *xp;
+	*xp = *yp;
+	*yp = tmp;
 }
 /**
  * bubble_sort - sorting array using bubble algorithm
